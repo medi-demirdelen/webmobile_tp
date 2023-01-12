@@ -1,0 +1,24 @@
+{
+    "enemies": {
+        "1": {
+            "id": 1,
+            "hp": 10,
+            "name": "Ennemi n°1",
+            "atk": 2,
+            "exp": 3
+        }, 
+        "2" : {
+            "id": 2,
+            "hp": 12,
+            "name": "Ennemi n°2",
+            "atk": 2,
+            "exp": 5
+        }
+    },
+    "player": {
+        "hp": 20,
+        "name": "Joueur",
+        "atk": 3,
+        "def": 4
+    }
+}
