@@ -8,6 +8,7 @@ function Home({stats}) {
     const [showStatus, setStatus] = React.useState(false);
     const [showEnemy, setEnemy] = React.useState(false);
 
+    // eslint-disable-next-line no-unused-vars
     const [statsValue, setStatsValue] = React.useContext(StatsContext);
 
     function goToBattle(enemyId) {
