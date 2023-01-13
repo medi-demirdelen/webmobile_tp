@@ -42,8 +42,8 @@ function Battle({stats}) {
     function processBattle() {
         setItems(false);
         if(playerHP !== 0 && enemyHP !== 0 && !battleFinished) {
-            playerAttack(stats['player']['atk']);
-            enemyAttack(stats['enemies'][id]['atk']);   
+            playerAttack(stats['player']['atk'] + (statsValue.level-1));
+            enemyAttack(stats['enemies'][id]['atk'] - (stats['player']['def'] + (statsValue.level-1)));   
         }
     }
 
@@ -65,15 +65,17 @@ function Battle({stats}) {
         if(playerHP === 0 || enemyHP === 0) {
             setBattleFinished(true);
 
-            function getXP(xp) {
+            function getXP(xp, moneyYield) {
                 setStatsValue({
                     ...statsValue,
                     exp: statsValue.exp + xp,
+                    level: Math.floor(((statsValue.exp+1)/6))+1,
+                    money: statsValue.money + moneyYield,
                 });
             }
 
             if(!xpIsGained) {
-                getXP(stats['enemies'][id]['exp']);
+                getXP(stats['enemies'][id]['exp'], stats['enemies'][id]['money']);
                 setXpIsGained(true);
             } 
         }

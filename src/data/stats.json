@@ -4,15 +4,17 @@
             "id": 1,
             "hp": 10,
             "name": "Ennemi n°1",
-            "atk": 2,
-            "exp": 3
+            "atk": 6,
+            "exp": 3,
+            "money": 10
         }, 
         "2" : {
             "id": 2,
             "hp": 12,
             "name": "Ennemi n°2",
-            "atk": 2,
-            "exp": 5
+            "atk": 7,
+            "exp": 5,
+            "money": 15
         }
     },
     "player": {

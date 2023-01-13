@@ -45,11 +45,12 @@ function Home({stats}) {
             {
                 showStatus && 
                 <div className="Status">
-                    { "Niveau : " + Math.floor(((statsValue.exp+1)/6))+1 }<br/>
-                    { "EXP : " + statsValue.exp}<br/>
-                    { "HP : " + (stats['player']['hp'] + (2 * ((Math.floor(((statsValue.exp+1)/6))+1) -1)) )}<br/>
-                    { "Atk : " + (stats['player']['atk'] +((Math.floor(((statsValue.exp+1)/6))+1) -1) )}<br/>
-                    { "Def : " + (stats['player']['def'] +((Math.floor(((statsValue.exp+1)/6))+1) -1) )}
+                    { "Niveau : " + statsValue.level }<br/>
+                    { "EXP : " + statsValue.exp }<br/>
+                    { "HP : " + (stats['player']['hp'] + (2 * (statsValue.level-1)) )}<br/>
+                    { "Atk : " + (stats['player']['atk'] + (statsValue.level-1) )}<br/>
+                    { "Def : " + (stats['player']['def'] + (statsValue.level-1) )}<br/>
+                    { "Argent : " + statsValue.money }
                 </div>
             }
         </div>

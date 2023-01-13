@@ -22,7 +22,9 @@ export const StatsContext = React.createContext({});
 function App() {
 
   const [statsValue, setStatsValue] = React.useState({
-    exp: 0
+    exp: 0,
+    level: 1,
+    money: 0
   });
 
   return (
